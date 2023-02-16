@@ -1,12 +1,21 @@
 import './NewExpense.css'
 import ExpenseForm from './ExpenseForm'
 
-const NewExpenses = () => {
+const NewExpense = () => {
+
+	const saveExpenseData = enteredData => {
+		const expenseData = {
+			...enteredData
+		}
+		console.log(expenseData);
+	}
+
+
 	return (
 		<div className='new-expense'>
-			<ExpenseForm />
+			<ExpenseForm onSaveExpenseData={saveExpenseData} />
 		</div>
 	)
 }
 
-export default NewExpenses
+export default NewExpense
